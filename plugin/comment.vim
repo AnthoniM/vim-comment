@@ -46,7 +46,7 @@ function! s:doComment(indent)
 endfunction
 
 function! s:CommentOperator(indent)
-  let curline = saved_cursor[1]
+  let curline = getcurpos()[1]
   " If the current line is commented uncomment the whole block.
   " Otherwise comment the whole block.
   if s:isLineCommented(curline)
